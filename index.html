@@ -1,0 +1,888 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>New Lowes &mdash; Chinese takeaway on Lynn Road, Gaywood, King&rsquo;s Lynn</title>
+<meta name="description" content="Chinese takeaway and delivery. 59 Lynn Road, Gaywood, King's Lynn, PE30 4PR. Phone 01553 773179 to order.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,SOFT@9..144,400..900,0..100&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --paper:#F4E4BC;
+  --paper-warm:#EDD9AA;
+  --paper-deep:#E4CB95;
+  --ink:#1F1611;
+  --ink-deep:#0F0907;
+  --red:#8B3A3A;
+  --red-deep:#6B2A2A;
+  --red-soft:rgba(139,58,58,0.14);
+  --gold:#C9A03A;
+  --gold-soft:rgba(201,160,58,0.22);
+  --rule:rgba(31,22,17,0.18);
+  --rule-light:rgba(244,228,188,0.24);
+  --display:"Fraunces","Cormorant Garamond",Georgia,serif;
+  --body:"Manrope",system-ui,-apple-system,sans-serif;
+}
+
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  background:var(--paper);
+  color:var(--ink);
+  font-family:var(--body);
+  font-size:clamp(15px,0.55vw + 13px,17px);
+  line-height:1.6;
+  overflow-x:hidden;
+  -webkit-font-smoothing:antialiased;
+  text-rendering:optimizeLegibility;
+}
+
+/* paper grain on cream surfaces */
+body::before{
+  content:"";
+  position:fixed;
+  inset:0;
+  pointer-events:none;
+  z-index:1;
+  background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 240 240' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.92' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 0.12  0 0 0 0 0.085  0 0 0 0 0.06  0 0 0 0.18 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  opacity:.55;
+  mix-blend-mode:multiply;
+}
+main,header,footer{position:relative;z-index:2}
+
+h1,h2,h3,h4{
+  font-family:var(--display);
+  font-weight:700;
+  line-height:.95;
+  letter-spacing:-0.02em;
+  text-wrap:balance;
+  font-variation-settings:"opsz" 144,"SOFT" 25;
+}
+p{text-wrap:pretty;hyphens:auto;max-width:60ch}
+a{color:inherit;text-decoration-thickness:1.5px;text-underline-offset:3px}
+
+/* ───────────── nav ───────────── */
+.topbar{
+  position:sticky;top:0;z-index:50;
+  background:var(--paper);
+  border-bottom:1px solid var(--rule);
+}
+.topbar__inner{
+  display:flex;align-items:center;justify-content:space-between;gap:18px;
+  padding:14px clamp(18px,4vw,52px);
+  max-width:1440px;margin:0 auto;
+}
+.mark{
+  font-family:var(--display);
+  font-weight:700;
+  font-size:clamp(22px,2.2vw,30px);
+  letter-spacing:-0.015em;
+  line-height:1;
+  display:inline-flex;align-items:baseline;gap:6px;
+  text-decoration:none;
+  font-variation-settings:"opsz" 144,"SOFT" 50;
+}
+.mark__dot{
+  display:inline-block;width:8px;height:8px;border-radius:999px;
+  background:var(--red);transform:translateY(-2px);
+}
+.nav{
+  display:flex;align-items:center;gap:clamp(14px,2.4vw,30px);
+  font-size:12.5px;font-weight:500;
+  text-transform:uppercase;letter-spacing:0.18em;
+}
+.nav a{
+  text-decoration:none;
+  padding:6px 0;
+  border-bottom:1.5px solid transparent;
+  transition:border-color .22s ease;
+}
+.nav a:hover{border-bottom-color:var(--ink)}
+.nav__cta{
+  background:var(--red);color:var(--paper);
+  padding:11px 18px;
+  text-decoration:none;
+  font-weight:700;
+  letter-spacing:0.1em;
+  font-size:12px;
+  transition:background .2s ease,transform .2s ease;
+}
+.nav__cta:hover{background:var(--red-deep);transform:translateY(-1px)}
+
+@media (max-width:720px){
+  .nav{gap:14px;font-size:11px;letter-spacing:0.14em}
+  .nav .nav__link{display:none}
+  .nav__cta{padding:9px 14px;font-size:11px}
+}
+
+/* ───────────── hero ───────────── */
+.hero{
+  padding:clamp(36px,7vw,84px) clamp(18px,4vw,52px) clamp(40px,7vw,92px);
+  max-width:1440px;margin:0 auto;
+  display:grid;
+  grid-template-columns:minmax(0,1.55fr) minmax(0,1fr);
+  gap:clamp(28px,5vw,72px);
+  align-items:end;
+}
+@media (max-width:880px){
+  .hero{grid-template-columns:1fr;gap:36px;align-items:start}
+}
+.hero__kicker{
+  font-size:12px;font-weight:600;
+  letter-spacing:0.34em;text-transform:uppercase;
+  color:var(--red);
+  margin-bottom:clamp(18px,2vw,24px);
+  display:flex;align-items:center;gap:14px;
+}
+.hero__kicker::before{
+  content:"";display:inline-block;
+  width:36px;height:1.5px;background:var(--red);
+}
+.hero__masthead{
+  font-size:clamp(4.4rem,16vw,15rem);
+  line-height:.86;
+  letter-spacing:-0.045em;
+  font-variation-settings:"opsz" 144,"SOFT" 30,"wght" 700;
+  margin-bottom:clamp(18px,3vw,30px);
+}
+.hero__masthead .row{display:block}
+.hero__masthead .lowes{
+  font-style:italic;
+  font-variation-settings:"opsz" 144,"SOFT" 100,"wght" 600;
+  color:var(--red-deep);
+}
+.hero__masthead .amp{
+  display:inline-block;
+  font-style:italic;
+  color:var(--gold);
+  font-size:.6em;
+  vertical-align:0.18em;
+  margin:0 .05em;
+  font-variation-settings:"opsz" 144,"SOFT" 100,"wght" 400;
+}
+.hero__sub{
+  font-family:var(--display);
+  font-size:clamp(1.3rem,1.9vw + 0.4rem,2.2rem);
+  font-style:italic;
+  font-variation-settings:"opsz" 144,"SOFT" 80,"wght" 400;
+  color:var(--ink);
+  max-width:24ch;
+  margin-top:6px;
+}
+.hero__sub em{color:var(--red);font-style:italic}
+
+.hero__card{
+  border:1px solid var(--rule);
+  background:var(--paper-warm);
+  padding:clamp(22px,2.4vw,32px);
+  position:relative;
+}
+.hero__card::before{
+  content:"";position:absolute;
+  top:-1px;left:-1px;right:-1px;
+  height:3px;background:var(--red);
+}
+.hero__card h3{
+  font-size:14px;font-weight:600;
+  font-family:var(--body);
+  text-transform:uppercase;letter-spacing:0.22em;
+  color:var(--red-deep);
+  margin-bottom:18px;
+}
+.hero__card .row{
+  padding:11px 0;
+  display:flex;justify-content:space-between;gap:18px;
+  border-top:1px dashed var(--rule);
+  font-size:14.5px;
+}
+.hero__card .row:first-of-type{border-top:none;padding-top:0}
+.hero__card .row .k{
+  font-weight:500;color:var(--ink);
+  letter-spacing:0.02em;
+}
+.hero__card .row .v{
+  font-family:var(--display);
+  font-style:italic;
+  font-size:16px;
+  text-align:right;
+  font-variation-settings:"opsz" 144,"SOFT" 80,"wght" 500;
+}
+.hero__card .row .v a{text-decoration:none;border-bottom:1px solid var(--ink)}
+.hero__card__cta{
+  display:block;margin-top:22px;
+  text-align:center;
+  padding:16px 14px;
+  background:var(--ink);color:var(--paper);
+  text-decoration:none;
+  font-family:var(--body);
+  font-weight:700;letter-spacing:0.16em;
+  font-size:13px;text-transform:uppercase;
+  transition:background .22s ease;
+}
+.hero__card__cta:hover{background:var(--red)}
+
+/* chop mark — hand-stamped seal */
+.chop{
+  position:absolute;
+  right:clamp(20px,3vw,40px);
+  top:clamp(20px,3vw,40px);
+  width:clamp(60px,7vw,92px);height:clamp(60px,7vw,92px);
+  border-radius:50%;
+  background:var(--red);
+  color:var(--paper);
+  display:grid;place-items:center;
+  font-family:var(--display);
+  font-size:clamp(28px,3.4vw,46px);
+  font-style:italic;
+  font-variation-settings:"opsz" 144,"SOFT" 100,"wght" 600;
+  transform:rotate(-8deg);
+  box-shadow:0 0 0 3px var(--red),0 0 0 4px var(--paper),0 0 0 5px var(--red);
+  line-height:1;
+  letter-spacing:-0.04em;
+}
+.chop::after{
+  content:"EST.";
+  position:absolute;
+  bottom:6px;
+  font-size:8px;font-family:var(--body);
+  font-style:normal;font-weight:700;letter-spacing:0.2em;
+}
+@media (max-width:880px){.chop{position:static;margin-bottom:14px}}
+
+/* ───────────── marquee ───────────── */
+.marquee{
+  overflow:hidden;
+  border-top:1px solid var(--rule);
+  border-bottom:1px solid var(--rule);
+  background:var(--paper);
+  padding:18px 0;
+}
+.marquee__track{
+  display:inline-flex;gap:3rem;white-space:nowrap;
+  animation:scroll 38s linear infinite;
+  font-family:var(--display);
+  font-size:clamp(28px,4vw,52px);
+  font-style:italic;
+  font-variation-settings:"opsz" 144,"SOFT" 80,"wght" 500;
+  color:var(--ink);
+}
+.marquee__track span{display:inline-flex;align-items:center;gap:3rem}
+.marquee__track span::after{
+  content:"•";color:var(--red);font-style:normal;
+}
+.marquee__track span:last-child::after{content:""}
+@keyframes scroll{to{transform:translateX(-50%)}}
+.marquee:hover .marquee__track{animation-play-state:paused}
+
+/* ───────────── sections ───────────── */
+section{padding:clamp(56px,8vw,112px) clamp(18px,4vw,52px)}
+.wrap{max-width:1280px;margin:0 auto}
+
+.section-head{
+  display:grid;grid-template-columns:auto 1fr;gap:24px;align-items:baseline;
+  margin-bottom:clamp(32px,5vw,56px);
+  border-bottom:1px solid var(--rule);
+  padding-bottom:24px;
+}
+.section-head .num{
+  font-family:var(--display);
+  font-size:14px;
+  font-variation-settings:"opsz" 16,"SOFT" 0,"wght" 600;
+  font-style:italic;
+  color:var(--red);
+  letter-spacing:0.18em;
+  text-transform:uppercase;
+}
+.section-head .num::before{content:"§ "}
+.section-head h2{
+  font-size:clamp(2.4rem,5.5vw,5.6rem);
+  letter-spacing:-0.025em;
+  font-variation-settings:"opsz" 144,"SOFT" 25,"wght" 600;
+}
+.section-head h2 em{
+  font-style:italic;color:var(--red-deep);
+  font-variation-settings:"opsz" 144,"SOFT" 100,"wght" 500;
+}
+
+/* about slab */
+.about{
+  background:var(--paper-warm);
+  border-top:1px solid var(--rule);
+  border-bottom:1px solid var(--rule);
+}
+.about__grid{
+  display:grid;
+  grid-template-columns:minmax(0,1fr) minmax(0,1.2fr);
+  gap:clamp(28px,5vw,80px);
+}
+@media (max-width:820px){.about__grid{grid-template-columns:1fr;gap:30px}}
+.about__lede{
+  font-family:var(--display);
+  font-size:clamp(1.5rem,2.2vw + 0.4rem,2.4rem);
+  line-height:1.18;
+  letter-spacing:-0.01em;
+  font-variation-settings:"opsz" 144,"SOFT" 30,"wght" 400;
+}
+.about__lede em{
+  font-style:italic;color:var(--red-deep);
+  font-variation-settings:"opsz" 144,"SOFT" 100,"wght" 500;
+}
+.about__body{display:flex;flex-direction:column;gap:18px;font-size:16px}
+.about__meta{
+  margin-top:30px;
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:18px;
+  padding-top:24px;
+  border-top:1px solid var(--rule);
+}
+.about__meta dt{
+  font-size:11px;font-weight:600;
+  text-transform:uppercase;letter-spacing:0.22em;
+  color:var(--red-deep);margin-bottom:6px;
+}
+.about__meta dd{
+  font-family:var(--display);
+  font-size:18px;
+  font-variation-settings:"opsz" 144,"SOFT" 30,"wght" 500;
+}
+
+/* menu */
+.menu{background:var(--paper)}
+.menu__list{
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:0;
+  border-top:1px solid var(--rule);
+}
+@media (max-width:760px){.menu__list{grid-template-columns:1fr}}
+.menu__row{
+  padding:26px clamp(8px,2vw,28px);
+  display:grid;
+  grid-template-columns:auto 1fr auto;
+  gap:18px;
+  align-items:baseline;
+  border-bottom:1px solid var(--rule);
+  border-right:1px solid var(--rule);
+}
+.menu__row:nth-child(2n){border-right:none}
+@media (max-width:760px){.menu__row{border-right:none}}
+.menu__num{
+  font-family:var(--display);
+  font-size:13px;
+  font-style:italic;
+  color:var(--red);
+  font-variation-settings:"opsz" 16,"SOFT" 80,"wght" 500;
+  letter-spacing:0.06em;
+  min-width:2.2ch;
+}
+.menu__name{
+  font-family:var(--display);
+  font-size:clamp(1.2rem,1.6vw + 0.3rem,1.7rem);
+  letter-spacing:-0.01em;
+  font-variation-settings:"opsz" 144,"SOFT" 30,"wght" 600;
+}
+.menu__name em{
+  display:block;
+  font-family:var(--body);
+  font-size:13.5px;
+  font-style:normal;
+  font-weight:400;
+  color:var(--ink);
+  opacity:.7;
+  margin-top:6px;
+  letter-spacing:0.005em;
+  line-height:1.45;
+}
+.menu__tag{
+  font-family:var(--body);
+  font-size:11px;font-weight:600;
+  text-transform:uppercase;letter-spacing:0.18em;
+  color:var(--red);
+  white-space:nowrap;
+}
+.menu__cta{
+  margin-top:clamp(32px,5vw,56px);
+  padding:clamp(28px,4vw,44px);
+  background:var(--ink-deep);
+  color:var(--paper);
+  display:grid;
+  grid-template-columns:1fr auto;
+  gap:24px;
+  align-items:center;
+}
+@media (max-width:680px){.menu__cta{grid-template-columns:1fr;text-align:left}}
+.menu__cta p{
+  font-family:var(--display);
+  font-size:clamp(1.2rem,1.6vw + 0.4rem,1.8rem);
+  line-height:1.25;
+  letter-spacing:-0.01em;
+  font-variation-settings:"opsz" 144,"SOFT" 30,"wght" 400;
+  max-width:42ch;
+  color:var(--paper);
+}
+.menu__cta p em{
+  font-style:italic;color:var(--gold);
+  font-variation-settings:"opsz" 144,"SOFT" 100,"wght" 500;
+}
+.menu__cta a{
+  background:var(--red);
+  color:var(--paper);
+  padding:18px 28px;
+  text-decoration:none;
+  font-family:var(--body);
+  font-weight:700;letter-spacing:0.16em;
+  font-size:13px;text-transform:uppercase;
+  white-space:nowrap;
+  transition:background .22s ease;
+}
+.menu__cta a:hover{background:var(--gold);color:var(--ink-deep)}
+
+/* gallery — honest empty state */
+.gallery{
+  background:var(--paper-deep);
+  border-top:1px solid var(--rule);
+  border-bottom:1px solid var(--rule);
+}
+.gallery__inner{
+  text-align:left;
+  padding:clamp(20px,3vw,40px) 0;
+}
+.gallery__line{
+  font-family:var(--display);
+  font-size:clamp(2.2rem,5vw,4.8rem);
+  font-style:italic;
+  line-height:1.05;
+  letter-spacing:-0.02em;
+  font-variation-settings:"opsz" 144,"SOFT" 100,"wght" 400;
+  color:var(--ink);
+  max-width:24ch;
+}
+.gallery__line em{color:var(--red-deep);font-style:italic}
+.gallery__note{
+  margin-top:24px;
+  font-size:14px;
+  max-width:46ch;
+  opacity:.75;
+}
+
+/* contact */
+.contact{background:var(--paper)}
+.contact__grid{
+  display:grid;
+  grid-template-columns:minmax(0,1fr) minmax(0,1.2fr);
+  gap:clamp(28px,5vw,72px);
+}
+@media (max-width:820px){.contact__grid{grid-template-columns:1fr}}
+.contact__card{
+  display:flex;flex-direction:column;gap:24px;
+}
+.contact__block{
+  border-top:1px solid var(--rule);
+  padding-top:18px;
+}
+.contact__block h3{
+  font-family:var(--body);
+  font-size:11px;font-weight:600;
+  text-transform:uppercase;letter-spacing:0.22em;
+  color:var(--red-deep);
+  margin-bottom:10px;
+}
+.contact__block p,.contact__block a{
+  font-family:var(--display);
+  font-size:clamp(1.2rem,1.6vw + 0.2rem,1.7rem);
+  letter-spacing:-0.01em;
+  font-variation-settings:"opsz" 144,"SOFT" 30,"wght" 500;
+  line-height:1.3;
+  text-decoration:none;
+}
+.contact__block a{
+  border-bottom:1.5px solid var(--red);
+  display:inline-block;
+}
+.contact__block a:hover{color:var(--red)}
+.contact__block .note{
+  font-family:var(--body);
+  font-size:13px;
+  font-weight:400;
+  letter-spacing:0;
+  margin-top:8px;
+  opacity:.7;
+}
+.contact__map{
+  background:var(--paper-warm);
+  border:1px solid var(--rule);
+  aspect-ratio:4/3;
+  overflow:hidden;
+}
+.contact__map iframe{
+  display:block;width:100%;height:100%;
+  border:0;
+  filter:saturate(.85) contrast(1.05);
+}
+
+/* ───────────── footer ───────────── */
+footer{
+  background:var(--ink-deep);
+  color:var(--paper);
+  padding:clamp(56px,8vw,100px) clamp(18px,4vw,52px) 32px;
+  position:relative;
+}
+footer::before{
+  content:"";position:absolute;left:0;right:0;top:0;
+  height:4px;background:var(--red);
+}
+.foot__masthead{
+  font-family:var(--display);
+  font-size:clamp(4rem,15vw,13rem);
+  line-height:.85;
+  letter-spacing:-0.045em;
+  font-variation-settings:"opsz" 144,"SOFT" 50,"wght" 500;
+  margin-bottom:clamp(28px,4vw,52px);
+  color:var(--paper);
+}
+.foot__masthead em{
+  font-style:italic;color:var(--red);
+  font-variation-settings:"opsz" 144,"SOFT" 100,"wght" 500;
+}
+.foot__grid{
+  display:grid;
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:clamp(24px,4vw,52px);
+  padding-top:32px;
+  border-top:1px solid var(--rule-light);
+  max-width:1280px;
+}
+@media (max-width:760px){.foot__grid{grid-template-columns:1fr;gap:30px}}
+.foot__col h4{
+  font-family:var(--body);
+  font-size:11px;font-weight:600;
+  text-transform:uppercase;letter-spacing:0.22em;
+  color:var(--gold);
+  margin-bottom:14px;
+}
+.foot__col p,.foot__col a{
+  font-family:var(--display);
+  font-size:18px;
+  letter-spacing:-0.005em;
+  font-variation-settings:"opsz" 144,"SOFT" 40,"wght" 400;
+  line-height:1.45;
+  color:var(--paper);
+  text-decoration:none;
+}
+.foot__col a{border-bottom:1px solid rgba(244,228,188,0.3)}
+.foot__col a:hover{border-bottom-color:var(--gold);color:var(--gold)}
+.foot__fine{
+  margin-top:48px;
+  padding-top:24px;
+  border-top:1px solid var(--rule-light);
+  font-family:var(--body);
+  font-size:12px;
+  letter-spacing:0.06em;
+  color:var(--paper);opacity:.6;
+  display:flex;justify-content:space-between;gap:18px;flex-wrap:wrap;
+}
+
+/* scroll reveal where supported */
+@supports (animation-timeline: view()){
+  .reveal{
+    animation:rise both;
+    animation-timeline:view();
+    animation-range:entry 0% cover 22%;
+  }
+  @keyframes rise{
+    from{opacity:0;transform:translateY(2rem)}
+    to{opacity:1;transform:translateY(0)}
+  }
+}
+
+@media (prefers-reduced-motion: reduce){
+  .marquee__track{animation:none}
+  .reveal{animation:none}
+}
+</style>
+</head>
+
+<body>
+
+<header class="topbar">
+  <div class="topbar__inner">
+    <a class="mark" href="#top" aria-label="New Lowes home">
+      New&nbsp;Lowes<span class="mark__dot" aria-hidden="true"></span>
+    </a>
+    <nav class="nav" aria-label="Primary">
+      <a class="nav__link" href="#about">About</a>
+      <a class="nav__link" href="#menu">Menu</a>
+      <a class="nav__link" href="#gallery">Gallery</a>
+      <a class="nav__link" href="#contact">Find us</a>
+      <a class="nav__cta" href="tel:01553773179">Phone &middot; 01553 773179</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- ───────────── HERO ───────────── -->
+  <section class="hero" aria-labelledby="home-h1">
+    <div>
+      <div class="hero__kicker">Chinese takeaway &middot; Gaywood, King&rsquo;s Lynn</div>
+      <h1 class="hero__masthead" id="home-h1">
+        <span class="row">New Lowes</span>
+        <span class="row lowes">on Lynn Road</span>
+      </h1>
+      <p class="hero__sub">
+        Hot Chinese takeaway &amp; delivery on the <em>Gaywood corner</em>
+        &mdash; phone-in orders welcome.
+      </p>
+    </div>
+
+    <aside class="hero__card" aria-label="Where to find us">
+      <div class="chop" aria-hidden="true">L</div>
+      <h3>Order &middot; Collect</h3>
+      <div class="row"><span class="k">Phone</span><span class="v"><a href="tel:01553773179">01553&nbsp;773179</a></span></div>
+      <div class="row"><span class="k">Address</span><span class="v">59 Lynn Road</span></div>
+      <div class="row"><span class="k">Area</span><span class="v">Gaywood</span></div>
+      <div class="row"><span class="k">Postcode</span><span class="v">PE30 4PR</span></div>
+      <a class="hero__card__cta" href="tel:01553773179">Call to order</a>
+    </aside>
+  </section>
+
+  <!-- ───────────── MARQUEE ───────────── -->
+  <div class="marquee" aria-hidden="true">
+    <div class="marquee__track">
+      <span>Chow Mein</span>
+      <span>Sweet &amp; Sour</span>
+      <span>Curry Sauce</span>
+      <span>Crispy Aromatic</span>
+      <span>Fried Rice</span>
+      <span>Chop Suey</span>
+      <span>Salt &amp; Pepper</span>
+      <span>Sides &amp; Starters</span>
+      <span>Chow Mein</span>
+      <span>Sweet &amp; Sour</span>
+      <span>Curry Sauce</span>
+      <span>Crispy Aromatic</span>
+      <span>Fried Rice</span>
+      <span>Chop Suey</span>
+      <span>Salt &amp; Pepper</span>
+      <span>Sides &amp; Starters</span>
+    </div>
+  </div>
+
+  <!-- ───────────── ABOUT ───────────── -->
+  <section class="about" id="about">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <span class="num">01 &middot; About</span>
+        <h2>A <em>neighbourhood</em> Chinese takeaway on Lynn Road.</h2>
+      </div>
+      <div class="about__grid">
+        <p class="about__lede reveal">
+          Hot food, paper bags, a phone that rings on a Friday night &mdash;
+          a small Chinese takeaway tucked into the <em>Gaywood</em>
+          end of Lynn Road, serving locals from PE30 and the surrounding
+          streets of King&rsquo;s Lynn.
+        </p>
+        <div class="about__body reveal">
+          <p>
+            New Lowes &mdash; sometimes listed as Lowe&rsquo;s House on the
+            delivery sites &mdash; is the kind of corner-shop Chinese the
+            neighbourhood has on speed-dial: chow mein, curry sauce,
+            crispy aromatic, and the rice that goes with everything.
+          </p>
+          <p>
+            Phone orders welcome. Collection from the shop. Delivery to
+            nearby streets where the round permits.
+          </p>
+          <dl class="about__meta">
+            <div>
+              <dt>Counter</dt>
+              <dd>59 Lynn Road, Gaywood</dd>
+            </div>
+            <div>
+              <dt>Authority</dt>
+              <dd>King&rsquo;s Lynn &amp; West&nbsp;Norfolk</dd>
+            </div>
+            <div>
+              <dt>Cuisine</dt>
+              <dd>Chinese &middot; takeaway</dd>
+            </div>
+            <div>
+              <dt>To order</dt>
+              <dd>01553 773179</dd>
+            </div>
+          </dl>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ───────────── MENU / SERVICES ───────────── -->
+  <section class="menu" id="menu">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <span class="num">02 &middot; What we cook</span>
+        <h2>The usual <em>favourites</em>, cooked to order.</h2>
+      </div>
+
+      <div class="menu__list">
+
+        <div class="menu__row reveal">
+          <span class="menu__num">i.</span>
+          <div class="menu__name">Chow Mein</div>
+          <span class="menu__tag">Noodles</span>
+        </div>
+
+        <div class="menu__row reveal">
+          <span class="menu__num">ii.</span>
+          <div class="menu__name">Sweet &amp; Sour</div>
+          <span class="menu__tag">House</span>
+        </div>
+
+        <div class="menu__row reveal">
+          <span class="menu__num">iii.</span>
+          <div class="menu__name">Curry Dishes</div>
+          <span class="menu__tag">Saucy</span>
+        </div>
+
+        <div class="menu__row reveal">
+          <span class="menu__num">iv.</span>
+          <div class="menu__name">Crispy Aromatic</div>
+          <span class="menu__tag">Sharer</span>
+        </div>
+
+        <div class="menu__row reveal">
+          <span class="menu__num">v.</span>
+          <div class="menu__name">Fried Rice</div>
+          <span class="menu__tag">Rice</span>
+        </div>
+
+        <div class="menu__row reveal">
+          <span class="menu__num">vi.</span>
+          <div class="menu__name">Chop Suey</div>
+          <span class="menu__tag">Stir-fry</span>
+        </div>
+
+        <div class="menu__row reveal">
+          <span class="menu__num">vii.</span>
+          <div class="menu__name">Salt &amp; Pepper</div>
+          <span class="menu__tag">Spicy</span>
+        </div>
+
+        <div class="menu__row reveal">
+          <span class="menu__num">viii.</span>
+          <div class="menu__name">Sides &amp; Starters</div>
+          <span class="menu__tag">Add-ons</span>
+        </div>
+
+      </div>
+
+      <div class="menu__cta reveal">
+        <p>The <em>current menu</em> &middot; phone the shop &mdash; the freshest list of dishes and today&rsquo;s prices is one short call away.</p>
+        <a href="tel:01553773179">Call 01553 773179</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ───────────── GALLERY ───────────── -->
+  <section class="gallery" id="gallery">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <span class="num">03 &middot; Gallery</span>
+        <h2>A <em>shopfront</em>, a counter, paper bags.</h2>
+      </div>
+      <div class="gallery__inner reveal">
+        <p class="gallery__line">
+          <em>Photographs to follow</em> &mdash; the shopfront, the
+          counter, and the bag you take home on a Friday night.
+        </p>
+        <p class="gallery__note">
+          If you&rsquo;ve got a phone snap of your dinner from Lowe&rsquo;s
+          on a recent night, send it in &mdash; we&rsquo;ll set the gallery
+          when we have the real thing.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ───────────── CONTACT ───────────── -->
+  <section class="contact" id="contact">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <span class="num">04 &middot; Find us</span>
+        <h2>59 Lynn Road, <em>Gaywood</em>, King&rsquo;s Lynn.</h2>
+      </div>
+
+      <div class="contact__grid">
+        <div class="contact__card reveal">
+          <div class="contact__block">
+            <h3>Phone</h3>
+            <a href="tel:01553773179">01553 773179</a>
+            <p class="note">Call to order for collection &mdash; or to check what&rsquo;s on tonight.</p>
+          </div>
+          <div class="contact__block">
+            <h3>Address</h3>
+            <p>
+              59 Lynn Road<br>
+              Gaywood<br>
+              King&rsquo;s Lynn<br>
+              Norfolk &middot; PE30 4PR
+            </p>
+          </div>
+          <div class="contact__block">
+            <h3>Hours</h3>
+            <p>Phone the shop for current opening</p>
+            <p class="note">We&rsquo;ll publish set times here once they&rsquo;re confirmed for the new season.</p>
+          </div>
+          <div class="contact__block">
+            <h3>How to order</h3>
+            <p>Phone &middot; Collect from counter</p>
+            <p class="note">Local delivery where the round permits &mdash; ask when you call.</p>
+          </div>
+        </div>
+
+        <div class="contact__map reveal" aria-label="Map of 59 Lynn Road, PE30 4PR">
+          <iframe
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            src="https://www.google.com/maps?q=59+Lynn+Road+Gaywood+King%27s+Lynn+PE30+4PR&output=embed"
+            title="Map of New Lowes, 59 Lynn Road, Gaywood, King's Lynn, PE30 4PR">
+          </iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- ───────────── FOOTER ───────────── -->
+<footer>
+  <div class="foot__masthead">
+    New <em>Lowes</em>
+  </div>
+  <div class="foot__grid">
+    <div class="foot__col">
+      <h4>Counter</h4>
+      <p>59 Lynn Road<br>Gaywood, King&rsquo;s Lynn<br>Norfolk PE30 4PR</p>
+    </div>
+    <div class="foot__col">
+      <h4>To order</h4>
+      <p><a href="tel:01553773179">01553 773179</a></p>
+    </div>
+    <div class="foot__col">
+      <h4>Authority</h4>
+      <p>King&rsquo;s Lynn &amp; West Norfolk<br>Food Hygiene rated</p>
+    </div>
+  </div>
+  <div class="foot__fine">
+    <span>&copy; New Lowes &middot; 59 Lynn Road, PE30 4PR</span>
+    <span>Phone &middot; 01553 773179</span>
+  </div>
+</footer>
+
+</body>
+</html>
